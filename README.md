@@ -10,3 +10,4 @@ Miembros de este grupo:
 
 Clases realizados:
  * Personal -> Cocinero y Cajero / Vega, Ignacio David
+ * Festival / Avila, Brian
