@@ -17,7 +17,7 @@ public class FestivalABM {
 
 	public int agregar(String nombre, String temporada, LocalDate fechaInicio, LocalDate fechaFin, Set<UnidadVenta> unidadesVenta) throws Exception {
 		//Excepcion por cliente duplicado
-		if(traer(nombre) != null)throw new Exception("ERROR ya existe festival con nombre: " + nombre);
+		if(dao.traer(nombre) != null)throw new Exception("ERROR ya existe festival con nombre: " + nombre);
 		Festival f = new Festival(nombre, temporada, fechaInicio, fechaFin, unidadesVenta);
 		return dao.agregar(f);
 	}
