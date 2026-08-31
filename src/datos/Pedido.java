@@ -6,17 +6,15 @@ public class Pedido {
 	
 	private long idPedido;
 	private LocalDate fechaPedido;
-	private Festival festival;
 	private UnidadVenta unidadVenta;
 	private Plato plato;
 	private long cantidadPlato;
 	
 	public Pedido(){}
 	
-	public Pedido(LocalDate fechaPedido, Festival festival, UnidadVenta unidadVenta, Plato plato, long cantidadPlato) {
+	public Pedido(LocalDate fechaPedido, UnidadVenta unidadVenta, Plato plato, long cantidadPlato) {
 		super();
 		this.fechaPedido = fechaPedido;
-		this.festival = festival;
 		this.unidadVenta = unidadVenta;
 		this.plato = plato;
 		this.cantidadPlato = cantidadPlato;
@@ -36,14 +34,6 @@ public class Pedido {
 
 	public void setFechaPedido(LocalDate fechaPedido) {
 		this.fechaPedido = fechaPedido;
-	}
-
-	public Festival getFestival() {
-		return festival;
-	}
-
-	public void setFestival(Festival festival) {
-		this.festival = festival;
 	}
 
 	public UnidadVenta getUnidadVenta() {
@@ -72,8 +62,9 @@ public class Pedido {
 
 	@Override
 	public String toString() {
-		return "Pedido [idPedido=" + idPedido + ", fechaPedido=" + fechaPedido + ", festival=" + festival
-				+ ", unidadVenta=" + unidadVenta + ", plato=" + plato + ", cantidadPlato=" + cantidadPlato + "]";
+		return "Pedido [idPedido=" + idPedido + ", fechaPedido=" + fechaPedido 
+			+ ", unidadVenta=" + unidadVenta + ", plato=" + plato + ", cantidadPlato=" + cantidadPlato + "]";
+		
 	}
 	
 }
